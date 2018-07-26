@@ -1,0 +1,6 @@
+[flake8]
+show-pep8 = True
+show-source = True
+max-line-length = 120
+statistics = True
+exclude = venv
