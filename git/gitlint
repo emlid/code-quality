@@ -1,5 +1,7 @@
 [general]
 ignore=body-is-missing
+ignore-fixup-commits=false
+ignore-squash-commits=false
 
 [title-max-length]
 line-length=80
@@ -15,3 +17,6 @@ min-length=5
 
 [author-valid-email]
 regex=.+@emlid.com
+
+[title-must-not-contain-word]
+words=fixup,squash
