@@ -4,7 +4,7 @@ ignore-fixup-commits=false
 ignore-squash-commits=false
 
 [title-max-length]
-line-length=80
+line-length=72
 
 [title-match-regex]
 regex=.*: .*
