@@ -16,7 +16,7 @@ line-length=200
 min-length=5
 
 [author-valid-email]
-regex=.+@emlid.com
+regex=(.+@emlid.com|.+(dependabot)\[(bot)\]@users.noreply.github.com)
 
 [title-must-not-contain-word]
 words=fixup,squash
