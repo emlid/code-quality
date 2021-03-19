@@ -1,0 +1,43 @@
+{
+  "rules": {
+    "arrow-parens": "warn",
+    "class-methods-use-this": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never",
+        "imports": "never",
+        "objects": "only-multiline"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-alert": "error",
+    "no-console": "warn",
+    "object-curly-spacing": [
+      "always",
+      "warn"
+    ],
+    "quotes": [
+      "single",
+      "warn",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "semi": [
+      "always",
+      "error"
+    ]
+  }
+}
