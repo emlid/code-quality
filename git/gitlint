@@ -7,7 +7,7 @@ ignore-squash-commits=false
 line-length=72
 
 [title-match-regex]
-regex=^((?!(fixup|amend|squash)!).)*: .*
+regex=^((?!(fixup|amend|squash)!)).*: .*
 
 [body-max-line-length]
 line-length=200
