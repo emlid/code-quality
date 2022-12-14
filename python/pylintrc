@@ -31,7 +31,8 @@ extension-pkg-allow-list=
 # be loaded. Extensions are loading into the active Python interpreter and may
 # run arbitrary code. (This is an alternative name to extension-pkg-allow-list
 # for backward compatibility.)
-extension-pkg-whitelist=
+extension-pkg-whitelist=fiona,
+                        pycurl
 
 # Return non-zero exit code if any of these messages/categories are detected,
 # even if score is above --fail-under value. Syntax same as enable. Messages
@@ -46,7 +47,7 @@ fail-under=10
 #from-stdin=
 
 # Files or directories to be skipped. They should be base names, not paths.
-ignore=CVS
+ignore=CVS,venv
 
 # Add files or directories matching the regular expressions patterns to the
 # ignore-list. The regex matches against paths and can be in Posix or Windows
@@ -72,7 +73,7 @@ ignored-modules=
 # Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
 # number of processors available to use, and will cap the count on Windows to
 # avoid hangs.
-jobs=1
+jobs=0
 
 # Control the amount of potential inferred values when inferring a single
 # object. This can help the performance when dealing with large functions or
@@ -184,7 +185,12 @@ good-names=i,
            k,
            ex,
            Run,
-           _
+           _,
+           x,
+           y,
+           z,
+           id,
+           logger
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
@@ -238,7 +244,7 @@ variable-naming-style=snake_case
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
 # naming style.
-#variable-rgx=
+variable-rgx=[a-z_][a-z0-9_]{0,30}$
 
 
 [CLASSES]
@@ -281,7 +287,7 @@ ignored-parents=
 max-args=5
 
 # Maximum number of attributes for a class (see R0902).
-max-attributes=7
+max-attributes=12
 
 # Maximum number of boolean expressions in an if statement (see R0916).
 max-bool-expr=5
@@ -305,7 +311,7 @@ max-returns=6
 max-statements=50
 
 # Minimum number of public methods for a class (see R0903).
-min-public-methods=2
+min-public-methods=0
 
 
 [EXCEPTIONS]
@@ -331,7 +337,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=120
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -419,7 +425,10 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         deprecated-pragma,
-        use-symbolic-message-instead
+        use-symbolic-message-instead,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -474,7 +483,7 @@ msg-template=
 # Set the output format. Available formats are text, parseable, colorized, json
 # and msvs (visual studio). You can also give a reporter class, e.g.
 # mypackage.mymodule.MyReporterClass.
-#output-format=
+output-format=text
 
 # Tells whether to display a full report or only the messages.
 reports=no
