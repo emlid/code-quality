@@ -46,8 +46,15 @@ select = [
     "W",
     # Pyflakes,
     "F",
+    # Pylint,
+    "PL",
 ]
-ignore = []
+ignore = [
+  # those are not yet supported by ruff
+  # "PLC0114",  # missing-module-docstring
+  # "PLC0115",  # missing-class-docstring
+  # "PLC0116",  # missing-function-docstring
+]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
