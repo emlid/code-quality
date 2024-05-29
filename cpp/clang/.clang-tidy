@@ -1,0 +1,50 @@
+Checks: >-
+  *,
+  -abseil-*,
+  -altera-*,
+  -android-*,
+  -boost-*,
+  -darwin-*,
+  -fuchsia-*,
+  -mpi-*,
+  -objc-*,
+  -openmp-*,
+  -zircon-*,
+  -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-pro-type-reinterpret-cast,
+  -llvmlibc-callee-namespace,
+  -llvmlibc-implementation-in-namespace,
+  -llvmlibc-restrict-system-libc-headers,
+  -misc-include-cleaner,
+  -modernize-use-trailing-return-type
+
+WarningsAsErrors: '*'
+FormatStyle: 'file'
+CheckOptions:
+  - { key: readability-magic-numbers.IgnoredIntegerValues, value: '-1;0;1' }
+  - { key: readability-identifier-length.IgnoredVariableNames, value: (fd|tv|it) }
+  - { key: readability-identifier-length.IgnoredParameterNames, value: (fd|tv|it) }
+  - { key: readability-identifier-naming.ClassCase, value: CamelCase }
+  - { key: readability-identifier-naming.ClassConstantCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.ClassMemberCase, value: lower_case }
+  - { key: readability-identifier-naming.ClassMemberPrefix, value: 'm_' }
+  - { key: readability-identifier-naming.ClassMethodCase, value: camelBack }
+  - { key: readability-identifier-naming.ClassMethodIgnoredRegexp, value: '^IP.*' }
+  - { key: readability-identifier-naming.ConstexprVariableCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.EnumCase, value: CamelCase }
+  - { key: readability-identifier-naming.EnumConstantCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.FunctionCase, value: camelBack }
+  - { key: readability-identifier-naming.GlobalConstantCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.MacroDefinitionCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.MemberCase, value: lower_case }
+  - { key: readability-identifier-naming.MethodCase, value: camelBack }
+  - { key: readability-identifier-naming.NamespaceCase, value: CamelCase }
+  - { key: readability-identifier-naming.ParameterCase, value: lower_case }
+  - { key: readability-identifier-naming.StaticConstantCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.StaticVariableCase, value: lower_case }
+  - { key: readability-identifier-naming.StructCase, value: lower_case }
+  - { key: readability-identifier-naming.StructSuffix, value: '_t' }
+  - { key: readability-identifier-naming.TypeAliasCase, value: CamelCase }
+  - { key: readability-identifier-naming.TypedefCase, value: CamelCase }
+  - { key: readability-identifier-naming.TypeTemplateParameterCase, value: CamelCase }
+  - { key: readability-identifier-naming.VariableCase, value: lower_case }
