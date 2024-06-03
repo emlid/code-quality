@@ -26,7 +26,7 @@ BitFieldColonSpacing: Both
 BraceWrapping:
   AfterCaseLabel:  true
   AfterClass:      true
-  AfterControlStatement: true
+  AfterControlStatement: MultiLine
   AfterEnum:       true
   AfterFunction:   true
   AfterNamespace:  false
