@@ -1,5 +1,5 @@
 # How to setup clang in your project
-To begin with, these configs are based on clang tools 17+ versions, so in order to work with it you should update your clang tools (For installation example in docker you can refer to [embedded-tools](https://github.com/emlid/embedded-tools/blob/master/docker/Dockerfile)) project).
+To begin with, these configs are based on clang tools 17+ versions, so in order to work with it you should update your clang tools (For installation example in docker you can refer to [reach-tools](https://github.com/emlid/reach-tools/blob/master/docker/Dockerfile)) project).
 
 Next, you should add code-quality as a submodule in the root of your project
 ```bash
@@ -38,4 +38,4 @@ clang-format-fix:
 	./code-quality/cpp/clang/clang-format.sh --fix --include-dirs="include src examples"
 ```
 
-Again, for a full setup example you can see [embedded-tools](https://github.com/emlid/embedded-tools) project. In case of questions do not hesitate to ask `@aleksandr.kovalenok` in Slack.
+Again, for a full setup example you can see [reach-tools](https://github.com/emlid/reach-tools) project. In case of questions do not hesitate to ask `@aleksandr.kovalenok` in Slack.
