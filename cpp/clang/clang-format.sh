@@ -38,7 +38,7 @@ for DIR in $DIRS_TO_CHECK; do
     FIND_CMD+=" $DIR"
 done
 
-FIND_CMD+=" -type f \( -name '*.h' -or -name '*.cpp' \)"
+FIND_CMD+=" -type f \( -name '*.h' -or -name '*.cpp' -or -name '*.cc' -or -name '*.c' \)"
 
 for EX_DIR in $EXCLUDED_DIRS; do
     FIND_CMD+=" -not -path '$EX_DIR/*'"
