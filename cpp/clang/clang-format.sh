@@ -4,6 +4,9 @@
 DIRS_TO_CHECK="include"
 EXCLUDED_DIRS=""
 
+# Config file path
+CONFIG_FILE="code-quality/cpp/clang/.clang-format"
+
 for i in "$@"
 do
 case $i in
@@ -26,11 +29,6 @@ case $i in
 esac
 done
 
-if [ ! -f .clang-format ]; then
-    echo ".clang-format not found! Make ./code-quality/cpp/clang/setup-clang-config.sh to fix it."
-    exit 1
-fi
-
 CLANG_FORMAT_BIN=clang-format-17
 
 FIND_CMD="find"
@@ -47,7 +45,7 @@ done
 SRC_TO_CHECK=$(eval $FIND_CMD)
 
 if [[ ! $FIX ]]; then
-    $CLANG_FORMAT_BIN -style=file -output-replacements-xml $SRC_TO_CHECK | grep "<replacement " > /dev/null 2>&1
+    $CLANG_FORMAT_BIN -style=file:$CONFIG_FILE -output-replacements-xml $SRC_TO_CHECK | grep "<replacement " > /dev/null 2>&1
 
     if [[ $? -eq 0 ]]; then
         echo "Clang-format detected non-compliant code, please fix it by calling me again with '--fix' flag"
@@ -57,6 +55,6 @@ else
     for file in $SRC_TO_CHECK
     do
         echo "$file fixing..."
-        $CLANG_FORMAT_BIN -style=file -i $file
+        $CLANG_FORMAT_BIN -style=file:$CONFIG_FILE -i $file
     done
 fi

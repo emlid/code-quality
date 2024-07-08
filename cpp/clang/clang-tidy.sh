@@ -1,13 +1,10 @@
 #!/bin/bash
 
-if [ ! -f .clang-tidy ]; then
-    echo ".clang-tidy not found! Make ./code-quality/cpp/clang/setup-clang-config.sh to fix it."
-    exit 1
-fi
-
 # Default directories to check
 DIRS_TO_CHECK="include"
 EXCLUDED_DIRS=""
+
+CONFIG_FILE="code-quality/cpp/clang/.clang-tidy"
 
 for i in "$@"
 do
@@ -51,6 +48,7 @@ fi
 run-clang-tidy-17 \
     -j "${NPROC}" \
     -clang-tidy-binary clang-tidy-17 \
+    -config-file=$CONFIG_FILE \
     -clang-apply-replacements-binary clang-apply-replacements-17 \
     -p build \
     $SRC_TO_CHECK
