@@ -82,9 +82,9 @@ InsertBraces: true  # Be extra careful with that
 InsertNewlineAtEOF: true
 InsertTrailingCommas: None
 IntegerLiteralSeparator:
-  Binary: 0
-  Decimal: 3
-  Hex: 0
+  Binary: -1
+  Decimal: -1
+  Hex: -1
 JavaScriptQuotes: Double
 JavaScriptWrapImports: true
 KeepEmptyLinesAtEOF: true
