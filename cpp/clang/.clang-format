@@ -1,13 +1,13 @@
 ---
 AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
-AlignArrayOfStructures: Right
+AlignArrayOfStructures: None
 AlignConsecutiveAssignments: false
 AlignConsecutiveBitFields: None
 AlignConsecutiveDeclarations: false
 AlignConsecutiveMacros: AcrossEmptyLinesAndComments
 AlignEscapedNewlines: Left
-AlignOperands: true
+AlignOperands: Align
 AlignTrailingComments: Always
 AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -39,6 +39,7 @@ BraceWrapping:
   SplitEmptyFunction: false
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
+BracedInitializerIndentWidth: 4
 BreakAfterAttributes: Leave
 BreakAfterJavaFieldAnnotations: true
 BreakArrays: false
