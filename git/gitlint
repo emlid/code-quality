@@ -16,4 +16,4 @@ line-length=200
 min-length=5
 
 [author-valid-email]
-regex=(.+@emlid.com|.+(dependabot)\[(bot)\]@users.noreply.github.com)
+regex=((.+@emlid.com)|(.+(dependabot)\[(bot)\]@users.noreply.github.com))
