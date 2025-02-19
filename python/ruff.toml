@@ -48,6 +48,8 @@ select = [
     "F",
     # Pylint,
     "PL",
+    # isort
+    "I"
 ]
 ignore = [
   # those are not yet supported by ruff
